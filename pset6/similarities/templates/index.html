@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div class="col">
+        <form action="/compare" enctype="multipart/form-data" method="post">
+            <fieldset>
+                <legend>
+                    File Input:
+                </legend>
+                <label>
+                    File 1:
+                    <input type="file" name="file1">
+                </label>
+                <label>
+                    File 2:
+                    <input type="file" name="file2">
+                </label>
+                <br />
+            </fieldset>
+            <br />
+            <fieldset>
+                <legend>
+                    Comparison Details:
+                </legend>
+                <p>
+                    <label for="which-algorithm">
+                        Which algorithm?
+                    </label>
+                    <select name="algorithm" id="which-algorithm">
+                        <option value="lines">Lines</option>
+                        <option value="sentences">Sentences</option>
+                        <option value="substrings">Substrings</option>
+                    </select>
+                </p>
+                <label>
+                    Substring Length (If Applicable):
+                    <input type="number"></input>
+                </label>
+                <br />
+                <button type="submit">COMPARE</button>
+            </fieldset>
+        </form>
+    </div>
+
+{% endblock %}

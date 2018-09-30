@@ -1,0 +1,21 @@
+0.  What is pneumonoultramicroscopicsilicovolcanoconiosis?
+        Pneumonoultramicroscopicsilicovolcanoconiosis is a lung disease caused by inhaling fine ash and sand dust.
+1.  According to its man page, what does getrusage do?
+        getrusage returns a pointer to a struct with information regarding usage statistics.
+2.  Per that same man page, how many members are in a variable of type struct rusage?
+        2
+3.  Why do you think we pass before and after by reference (instead of by value) to calculate, even though we’re not changing their contents?
+        The before and after will give more accurate information.
+4.  Explain as precisely as possible, in a paragraph or more, how main goes about reading words from a file. In other words, convince us that you indeed understand how that function’s for loop works.
+        The for loop takes the integer c and defines it as fgetc of fp which is the pointer to the memory location of the open file.
+        Which is interesting because I'm not entirely sure why c is defined as an integer. If fgetc gets the next character from the file, how is it defined as an integer.
+        Wouldn't it be better to define c as a char? So anyways, the for loop pulls the character from a file one at a time checking if the character is at the end of the file.
+        The loop then defines c as the next character. The if statement then checks to allow only alphabetical characters and apostrophes.
+        The character is then appended to a variable word at an aggregated index. The else if then ignores words with numbers.
+        If the whole word found, then terminate the current word and update the word counter. The word is then checked by the spelling.
+        From a call to dictionary.c is the word checked by spelling. The word is printed if misspelled.
+        The index is then increased.
+5.  Why do you think we used fgetc to read each word’s characters one at a time rather than use fscanf with a format string like "%s" to read whole words at a time? Put another way, what problems might arise by relying on fscanf alone?
+        The string might pass in data that have characters which are not all alphabetical.
+6.  Why do you think we declared the parameters for check and load as const (which means "constant")?
+        The parameters for check and load are declared as const so that the contents of check and load are immutable.

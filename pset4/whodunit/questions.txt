@@ -1,0 +1,12 @@
+1.  stdint.h is a programming library in C for BMP related data types
+2.  uint8_t, uint32_t, int32_t, and uint16_t are fixed integer data types for creating images
+3.  BYTE is 8 bytes, DWORD is 32 bytes, LONG is 32 bytes, WORD is 16 bytes.
+4.  The first 2 bytes of the BMP file format are the character "B" (066) then the character "M" (077) in ASCII encoding.
+5.  bfSize is the size, in bytes, of the bitmap file. biSize is the size, in bytes, of the image.
+6.  If biHeight is negative, the bitmap is a top-down DIB file with the origin at the upper left corner.
+7.  biBitCount
+8.  If the file locations do not exist or cannot be created.
+9.  1 is the number of elements being read at a time. We only need to read 1 element.
+10. 4
+11. fseek sets the file position of the stream to the given offset.
+12. SEEK_CUR moves a file pointer position to a given location.

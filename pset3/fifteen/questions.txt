@@ -1,0 +1,4 @@
+0. TODO - The game allows 3 x 3 and up to 9 x 9
+1. TODO - The structure is presented in a 2D array
+2. TODO - The function called to greet the user is greet()
+3. TODO - I need to implement init(), draw(), move(), and won()
